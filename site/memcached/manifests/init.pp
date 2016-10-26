@@ -19,5 +19,4 @@ class memcached {
     subscribe => File['/etc/sysconfig/memcached'],
   }
  }
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. 
+
