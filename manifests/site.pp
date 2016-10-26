@@ -45,4 +45,5 @@ node default {
   # path => /etc/motd
   include role::classroom
   include users
+  include skeleton
 }
