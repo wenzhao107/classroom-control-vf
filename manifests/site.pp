@@ -42,7 +42,7 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  path => /etc/motd
+  # path => /etc/motd
   include role::classroom
   include users
 }
