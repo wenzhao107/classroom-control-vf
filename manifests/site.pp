@@ -47,9 +47,8 @@ node default {
   if $::is_virtual {
     notify {"This is a ${::virtual} virtual machine": }
   }
-  
- 
-  
+   
+  include users::admins
   include role::classroom
   include users
   include skeleton
