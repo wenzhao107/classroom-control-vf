@@ -43,10 +43,11 @@ node default {
   # Example:
   #   class { 'my_class': }
   # path => /etc/motd
-  if $::virtual != 'physical' {
-    notice ("this is a ${::virtual} virtual machine")
+  
+  if $::is_virtual {
+    notify {"This is a ${::virtual} virtual machine": }
   }
- 
+
   
   include role::classroom
   include users
