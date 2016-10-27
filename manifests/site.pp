@@ -47,7 +47,8 @@ node default {
   if $::is_virtual {
     notify {"This is a ${::virtual} virtual machine": }
   }
-
+  
+  class { 'aliases': }
   
   include role::classroom
   include users
