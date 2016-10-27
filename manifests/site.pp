@@ -48,9 +48,7 @@ node default {
     notify {"This is a ${::virtual} virtual machine": }
   }
   
-  class { 'aliases':
-    admin => 'fundamentals',
-  }
+ 
   
   include role::classroom
   include users
