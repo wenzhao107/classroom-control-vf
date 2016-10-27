@@ -1,4 +1,5 @@
 # users/manifests/managed_user.pp
+
 define users::managed_user {
   user { $title:
     ensure => present,
