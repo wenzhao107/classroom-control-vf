@@ -10,7 +10,7 @@ class nginx {
   
   package { 'nginx':
     ensure => present, 
-
+    before => [File['/etc/nginx/conf.d/default.conf], File['/etc/nginx/nginx.conf']],
   }
   
   
@@ -26,14 +26,12 @@ class nginx {
   file { '/etc/nginx/conf.d/default.conf':
     ensure  => file,
     source  => 'puppet:///modules/nginx/default.conf',
-    require => Package['nginx'],
     notify  => Service['nginx'],
   }
   
   file { '/etc/nginx/nginx.conf':
     ensure  => file,
     source  => 'puppet:///modules/nginx/nginx.conf',
-    require => Package['nginx'],
     notify  => Service['nginx'],
 }
     
