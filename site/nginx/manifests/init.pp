@@ -1,15 +1,18 @@
 # nginx/manifests/init.pp
 class nginx {
 
-  package { 'nginx':
-    ensure => present,
-  }
-  
   File {
+    ensure => file;
     mode   => '0644',
     owner  => 'root',
     group  => 'root',
   }
+  
+  package { 'nginx':
+    ensure => present, 
+
+  }
+  
   
   file { '/var/www': 
     ensure => directory,
