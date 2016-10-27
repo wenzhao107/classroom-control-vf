@@ -10,7 +10,7 @@ class nginx {
   
   package { 'nginx':
     ensure => present, 
-    before => [File['/etc/nginx/conf.d/default.conf], File['/etc/nginx/nginx.conf']],
+    before => [File['/etc/nginx/conf.d/default.conf'], File['/etc/nginx/nginx.conf']],
   }
   
   
